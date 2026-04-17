@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-display: "Outfit", "Inter", "Segoe UI", Roboto, sans-serif;
+  
+  --color-primary: #004a99; /* Professional Pharma Blue */
+  --color-secondary: #00a651; /* Medical Green */
+  --color-accent: #f39200; /* Warm Accent */
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.medical-gradient {
+  background: linear-gradient(135deg, #004a99 0%, #0072bc 100%);
+}
